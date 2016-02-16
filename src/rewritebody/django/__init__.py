@@ -11,4 +11,6 @@ def do_replace(content, before_after):
 
 class RwriteBodyMiddleware(object):
     def process_response(self, request, response):
-        response.content = functools.reduce(do_replace, replace_pairs, response.content)
+        if response.has_header('Content-Type') and 'text/html' in response['Content-Type']:
+            response.content = functools.reduce(do_replace, replace_pairs, response.content)
+        return response

@@ -50,20 +50,20 @@ if sys.version_info < (3, 3, 0):
 
 
 setup(
-    name='sximada.boilerplate',
+    name='rewritebody',
     version=find_version('src'),
-    description='Python package boilerplate',
+    description='HTML Rewrite Body',
     long_description=read('README.rst') + '\n\n' + read('CHANGES.rst'),
     classifiers=[  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         "Programming Language :: Python",
     ],
     author='TakesxiSximada',
     author_email='sximada@gmail.com',
-    url='https://github.com/TakesxiSximada/sximada.boilerplate',
-    keywords='Sximada Python Package Boilerplater',
+    url='https://github.com/TakesxiSximada/rewritebody-py',
+    keywords='HTML',
     packages=find_packages('src', exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     package_dir={'': 'src'},
-    namespace_packages=['sximada'],
+    namespace_packages=[],
     include_package_data=True,
     zip_safe=False,
     test_suite='nose.collector',
@@ -106,6 +106,5 @@ setup(
     },
     entry_points="""\
       [console_scripts]
-      sximada-boilerplate = sximada.boilerplate.commands:main
       """,
     )

@@ -2,4 +2,4 @@
 u"""Python package boilerplate"""
 
 
-__version__ = '0.1.dev4'
+__version__ = '1.0'
